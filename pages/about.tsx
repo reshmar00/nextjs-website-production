@@ -5,7 +5,7 @@ export default function About() {
     <>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div id="main-content">
-          <Flex as="main" direction="column" alignItems="center" p={4}>
+          <Flex as="div" direction="column" alignItems="center" p={4}>
             <Image src="/resources/timeline-about_me.jpg" alt="About" className="infographic" />
           </Flex>
         </div>

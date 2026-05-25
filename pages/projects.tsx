@@ -11,7 +11,7 @@ export default function Projects() {
       <div id="main-content">
         <Box id="project-container">
           {/* First project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Apple Tree Game</Text>
             <Image
               src="/resources/appleTreeGameDemo.gif"
@@ -34,7 +34,7 @@ export default function Projects() {
           </VStack>
 
           {/* Second project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Chat Server</Text>
             <Image
               src="/resources/chatServerDemo.gif"
@@ -57,7 +57,7 @@ export default function Projects() {
           </VStack>
 
           {/* Third project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Unix Shell</Text>
             <Image
               src="/resources/unixShellDemo.gif"
@@ -80,7 +80,7 @@ export default function Projects() {
           </VStack>
 
           {/* Fourth project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">SVM vs. kNN Classifier</Text>
             <Image
               src="/resources/jupyter-notebook-demo.gif"

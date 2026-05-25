@@ -5,7 +5,7 @@ export default function Blog() {
     <>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div id="main-content">
-          <Flex as="main" direction="column" alignItems="center" p={4}>
+          <Flex as="div" direction="column" alignItems="center" p={4}>
             <Image src="/resources/under-construction_desktop.jpg" alt="Under Construction" />
           </Flex>
         </div>

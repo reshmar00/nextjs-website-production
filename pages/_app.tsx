@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ChakraProvider, CSSReset, extendTheme, Box } from '@chakra-ui/react';
+import Head from 'next/head';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
@@ -25,6 +26,9 @@ const theme = extendTheme({
 function ReshmaPortfolio({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>Reshma Raghavan Portfolio</title>
+      </Head>
       <CSSReset />
       <Box
         bgImage="url('/resources/desktop.jpg')"
@@ -35,13 +39,14 @@ function ReshmaPortfolio({ Component, pageProps }: AppProps) {
         display="flex"
         flexDirection="column"
         boxSizing="border-box"
+        className={raleway.className}
       >
         <Header />
-          <Layout>
-            <main className={raleway.className}>
-              <Component {...pageProps} />
-            </main>
-          </Layout>
+        <Layout>
+          <main>
+            <Component {...pageProps} />
+          </main>
+        </Layout>
         <Footer />
       </Box>
     </ChakraProvider>

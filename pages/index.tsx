@@ -40,7 +40,7 @@ export default function Home() {
 
         <Box id="project-container">
           {/* First project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Recipe Sharing Website</Text>
             <Image
               src="/resources/recipe-demo-1.gif"
@@ -67,7 +67,7 @@ export default function Home() {
           </VStack>
 
           {/* Second project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Twaddle</Text>
             <Image
               src="/resources/twaddle-demo.gif"
@@ -93,7 +93,7 @@ export default function Home() {
           </VStack>
 
           {/* Third project item */}
-          <VStack id="project-item" mb="8" spacing="4" alignItems="center">
+          <VStack className="project-item" mb="8" spacing="4" alignItems="center">
             <Text fontSize="2xl">Solar Water Heater</Text>
             <Image
               src="/resources/solar-water-heater-demo.gif"
@@ -105,7 +105,7 @@ export default function Home() {
             <Text width="80%">
               This program simulates a solar water heating system, using inputs
               like solar collector area, collector angle, time of day, etc. It
-              outputs the temperature change over time and the system's overall
+              outputs the temperature change over time and the system&apos;s overall
               efficiency. Technologies used include JavaScript, JEST, HTML, CSS,
               and Chart.js. For the full details on the science and technology
               behind this project, follow the link to my github repository below.

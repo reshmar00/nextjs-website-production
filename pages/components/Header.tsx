@@ -1,18 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
-import { Raleway } from 'next/font/google';
-
-const raleway = Raleway({
-  weight: '500',
-  subsets: ['latin'],
-});
 
 export default function Header() {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Box as="header" bg="rgba(255, 195, 0, 0.8)" p="1.25em" className={raleway.className}>
+    <Box as="header" bg="rgba(255, 195, 0, 0.8)" p="1.25em">
       <Flex justify="space-between" align="center" direction={isMobile ? 'column' : 'row'}>
         <Link href="/" passHref>
           <Image src="/resources/reshma_png.png" alt="Reshma" width={100} height={100} />
