@@ -63,22 +63,6 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#highlighted-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.profile-picture img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-#left-content, #right-content {
-  margin: 0 10px;
-}
 
 .highlight {
   font-size: 24px;

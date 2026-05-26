@@ -7,7 +7,7 @@ export default function Projects() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <Box display="flex" flexDir="column" alignItems="center" p={{ base: 3, md: 8, lg: '4rem' }}>
       <div id="main-content">
         <Box id="project-container">
           {/* First project item */}
@@ -19,8 +19,9 @@ export default function Projects() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               Collaborated with a project partner to create a simple game using C++ and the SFML library for its GUI components. We created several objects on screen (including one that was created dynamically), with some of them interacting with one another, and enabled user interaction through the keyboard.
             </Text>
             <Button
@@ -42,8 +43,9 @@ export default function Projects() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               Created a Slack clone (chat app) that allows users to enter a chat room and send messages. Includes full-stack development: frontend elements that use HTML, CSS, and JavaScript, and backend elements in Java that facilitate communication over web sockets. Developed my own web server in Java as part of this project.
             </Text>
             <Button
@@ -65,8 +67,9 @@ export default function Projects() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               This project is a custom Unix shell implementation developed in C++, drawing inspiration from well-known environments like bash and zsh. Utilizing POSIX system calls, the shell can interpret lines of input as individual user commands, proficiently managing operations such as ls, cat someFile, and echo hello world. Beyond this, the shell is equipped with I/O redirection, piping, and offers a smooth user experience with features like tab completion.
             </Text>
             <Button
@@ -88,8 +91,9 @@ export default function Projects() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               This Python project compares the accuracies of Support Vector Machine (SVM) and k-Nearest Neighbors (kNN) classifiers using the MNIST Handwritten Digits dataset. The project includes visualizations to illustrate the performance differences between these two methods.
             </Text>
             <Button
@@ -103,6 +107,6 @@ export default function Projects() {
           </VStack>
         </Box>
       </div>
-    </main>
+    </Box>
   );
 }

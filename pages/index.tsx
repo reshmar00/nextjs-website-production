@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Box, Button, Text, Link, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Text, Link, VStack } from '@chakra-ui/react';
 
 export default function Home() {
   const redirectToGitHub = (url: string) => {
@@ -7,20 +7,26 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <Box display="flex" flexDir="column" alignItems="center" p={{ base: 3, md: 8, lg: '4rem' }}>
       <div id="main-content">
-        <div id="highlighted-text">
-          <div id="left-content">
-            <div className="profile-picture">
-              <Image
-                src="/resources/headshot-400x400.jpg"
-                alt="Your Photo"
-                width={150}
-                height={150}
-              />
-            </div>
-          </div>
-          <div id="right-content">
+        <Flex
+          id="highlighted-text"
+          justify="center"
+          align="center"
+          mb="10"
+          direction={{ base: 'column', md: 'row' }}
+          gap={{ base: 4, md: 0 }}
+        >
+          <Box mx={{ base: 0, md: '10px' }} textAlign={{ base: 'center', md: 'left' }}>
+            <Image
+              src="/resources/headshot-400x400.jpg"
+              alt="Your Photo"
+              width={150}
+              height={150}
+              style={{ borderRadius: '50%' }}
+            />
+          </Box>
+          <Box mx={{ base: 0, md: '10px' }} textAlign={{ base: 'center', md: 'left' }}>
             <p className="highlight">
               Reshma Raghavan<br />
               <Image
@@ -35,8 +41,8 @@ export default function Home() {
                 reshmar00
               </Link>
             </p>
-          </div>
-        </div>
+          </Box>
+        </Flex>
 
         <Box id="project-container">
           {/* First project item */}
@@ -48,8 +54,9 @@ export default function Home() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               Recipe Sharing Website is a full-stack web application that
               allows users to share and discover recipes. The application has
               a React frontend and a Django backend, enabling users to browse
@@ -75,8 +82,9 @@ export default function Home() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               Twaddle is a fun web app that utilizes Node.js functionality for
               uploading files, sending emails, and emitting events. This project
               demonstrates various features including file upload, email sending,
@@ -101,8 +109,9 @@ export default function Home() {
               width={400}
               height={300}
               unoptimized
+              style={{ width: '100%', height: 'auto', maxWidth: '400px' }}
             />
-            <Text width="80%">
+            <Text width={{ base: '100%', md: '80%' }}>
               This program simulates a solar water heating system, using inputs
               like solar collector area, collector angle, time of day, etc. It
               outputs the temperature change over time and the system&apos;s overall
@@ -121,6 +130,6 @@ export default function Home() {
           </VStack>
         </Box>
       </div>
-    </main>
+    </Box>
   );
 }
