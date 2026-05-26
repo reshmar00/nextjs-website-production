@@ -114,8 +114,18 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
       viewport={{ once: false, amount: 0.15 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <Flex align="center" mb="8" direction={side === 'left' ? 'row' : 'row-reverse'}>
-        <Box w="44%">
+      <Flex
+        align="center"
+        mb="8"
+        direction={{ base: 'row', sm: side === 'left' ? 'row' : 'row-reverse' }}
+      >
+        {/* Card */}
+        <Box
+          flexGrow={{ base: 1, sm: 0 }}
+          flexShrink={1}
+          w={{ sm: '44%' }}
+          minW={0}
+        >
           <Box
             borderRadius="14px"
             overflow="hidden"
@@ -199,8 +209,15 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
           </Box>
         </Box>
 
-        {/* Spine dot */}
-        <Box w="12%" display="flex" justifyContent="center" alignItems="center">
+        {/* Spine dot — moves to front (left) on mobile via CSS order */}
+        <Box
+          order={{ base: -1, sm: 0 }}
+          w={{ base: '32px', sm: '12%' }}
+          flexShrink={0}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Box
             w="16px"
             h="16px"
@@ -213,7 +230,8 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
           />
         </Box>
 
-        <Box w="44%" />
+        {/* Spacer — hidden on mobile, fills opposite side on sm+ */}
+        <Box display={{ base: 'none', sm: 'block' }} w={{ sm: '44%' }} />
       </Flex>
     </motion.div>
   );
@@ -221,15 +239,21 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
 
 export default function Timeline() {
   return (
-    <Box position="relative" maxW="820px" mx="auto" px="5">
-      {/* Center spine */}
+    <Box
+      position="relative"
+      maxW="820px"
+      mx="auto"
+      pl={{ base: 0, sm: 5 }}
+      pr={{ base: 4, sm: 5 }}
+    >
+      {/* Spine — left rail on mobile, centered on sm+ */}
       <Box
         position="absolute"
-        left="50%"
+        left={{ base: '14px', sm: '50%' }}
         top={0}
         bottom={0}
         w="3px"
-        transform="translateX(-50%)"
+        transform={{ base: 'none', sm: 'translateX(-50%)' }}
         borderRadius="2px"
         style={{
           background: 'linear-gradient(to bottom, #FFBF00 0%, rgba(255,191,0,0.3) 100%)',
