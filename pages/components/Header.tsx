@@ -23,7 +23,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <Flex as="nav" align="center" display={{ base: 'none', md: 'flex' }}>
+        <Flex as="nav" align="center" display={{ base: 'none', lg: 'flex' }}>
           {navLinks.map(({ href, label }) => (
             <Link href={href} key={href}>
               <Text mx="1em" fontWeight="bold" color="#333">{label}</Text>
@@ -37,7 +37,7 @@ export default function Header() {
         {/* Hamburger button — mobile only */}
         <Box
           as="button"
-          display={{ base: 'flex', md: 'none' }}
+          display={{ base: 'flex', lg: 'none' }}
           alignItems="center"
           onClick={() => setIsOpen(!isOpen)}
           bg="transparent"
@@ -54,7 +54,7 @@ export default function Header() {
       <Collapse in={isOpen} animateOpacity>
         <Box
           as="nav"
-          display={{ base: 'block', md: 'none' }}
+          display={{ base: 'block', lg: 'none' }}
           bg="rgba(255, 195, 0, 0.97)"
           borderTop="1px solid rgba(0,0,0,0.1)"
         >
